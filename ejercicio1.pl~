@@ -1,0 +1,14 @@
+#!/bin/perl -w
+
+use Bio::Seq;
+use Bio::SeqIO;
+
+$seqio_obj = Bio::SeqIO->new(-file => "mRNAEjercicio1.gb", 
+                             -format => "GenBank",
+			     -desc => "Ejercicio 1",
+			     -alphabet => "rna");
+$seq_rna_obj = $seqio_obj->next_seq;
+print $seq_rna_obj->seq();
+
+
+
