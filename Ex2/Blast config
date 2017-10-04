@@ -1,0 +1,15 @@
+Bajar la ultima version de Blast (la instalada en BioLinux no permite trabajar con las bd remotas): ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.6.0+-x64-linux.tar.gz
+
+Configurar rutas:
+export PATH=$HOME/Desktop/Bioinformatica2C2017/Ex2/ncbi-blast-2.6.0+/bin:$PATH
+export BLASTDB=$HOME/Desktop/Bioinformatica2C2017/Ex2/blastdb
+
+Bajar base de datos para Blast:
+mkdir Ex2/blastdb
+cd Ex2/blastdb
+curl -O ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/swissprot.gz
+
+Convertir a formato blast usando:
+zcat swissprot.gz | awk '{if (/^>/) { print ">" $2} else { print $_}}' > swissprot
+makeblastdb -in swissprot -dbtype prot -input_type fasta -out swissprot -hash_index
+
