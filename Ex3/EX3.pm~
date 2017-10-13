@@ -1,0 +1,30 @@
+#!/usr/bin/perl -w
+
+use Bio::AlignIO;
+use Bio::Tools::Run::Alignment::Clustalw;
+use Bio::Seq;
+
+# Entrada FASTA
+my $proteinaInicial = Bio::SeqIO->new(-file=> "seqdump.fasta", 
+				-format => 'fasta');
+
+# Salida - clustalw
+my $salida = Bio::AlignIO->new(-file   => ">MSA", 
+				-format => 'clustalw');
+
+#constructor para correr Clustalw
+$factory = Bio::Tools::Run::Alignment::Clustalw->new(-matrix => 'BLOSUM');
+$ktuple = 3;
+$factory->ktuple($ktuple);
+
+# @seq_array es un arrray de secuencias, recorro mi entrada y agrego las secuencias fasta 
+
+@seq_array = ();
+while ( my $secuencia = $entrada->next_seq() ) {
+    push (@seq_array, $secuencia);
+
+}
+#Correr alineamiento
+$aln = $factory->align(\@seq_array);
+
+$salida->write_aln($aln);
