@@ -1,4 +1,7 @@
 # Bioinformatica2C2017
+## Link al TP 1
+https://docs.google.com/document/d/1jzHZQKS-2LJnJLrgr8OaJkPMREfSwjmVyqMtillIGE8/edit
+
 ## PARKINSON DISEASE 7, AUTOSOMAL RECESSIVE EARLY-ONSET
 https://www.omim.org/entry/606324
 
