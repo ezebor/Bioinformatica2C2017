@@ -1,0 +1,7 @@
+- Escanear la secuencia de nucleótidos del ejercicio 1, buscando motivos (motfis) de la DB PROSITE 
+	- patmatmotifs -full ../Ex1/mRNAEjercicio1.gb -outfile patmatmotifs-analisisMotivosDePROSITE
+- Análisis de las propiedades de los aminoácidos de la proteína del ejercicio 1:
+	- pepinfo ../Ex1/aminoacidosEjercicio1.fasta -outfile pepinfo-propiedadesAminoacidos -graph pdf
+- Graficar todos los potenciales ORF de la secuencia de nucleótidos del ejercicio 1:
+	- plotorf ../Ex1/mRNAEjercicio1.gb -graph pdf 
+

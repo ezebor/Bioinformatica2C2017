@@ -22,3 +22,6 @@ https://www.ncbi.nlm.nih.gov/nuccore/NM_007262.4
 * Ingresar en el accession el archivo FASTA resultado del ejercicio 1 (proteína traducida). No poner nada en query subrange.
 * Descargar en un FASTA las 10 primeras proteínas que más matchean con la proteína ingresada (resultado del ejercicio 1)
 * En el archivo descargado, colocar al principio la secuencia correspondiente a la proteína resultado del ejercicio 1 (de manera que en dicho fasta halla 11 secuencias, la primera original, y las 10 restantes obtenidas del blast online)
+
+## Punto 5: EMBOSS
+* Para probar emboss online + ver la documentación de los comandos por consola: http://www.bioinformatics.nl/emboss-explorer/
